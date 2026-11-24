@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ANNOX AI</title>
+<link rel="stylesheet" href="css/nexus.css">
+<link rel="stylesheet" href="css/file.css">
+<link rel="stylesheet" href="css/moduli.css">
+</head>
+<body>
+<div id="shell">
+<aside class="side">
+<div class="logo"><b class="mono">A</b><span class="marchio">ANNOX <em>AI</em></span></div>
+<nav id="menu"></nav>
+<button id="riduci" class="nav" type="button" title="Riduci il menu"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg><span>Riduci menu</span></button>
+</aside>
+<header class="top">
+<div class="sez" id="sezione">Dashboard</div>
+<div class="dx">
+<div class="stato"><i id="led"></i><b id="stt">CONNESSIONE</b></div>
+<div id="temi"></div>
+<div class="ora"><b id="ora">--:--</b><small id="data"></small></div>
+</div>
+</header>
+<main class="main">
+<section class="vista on" id="v-dash">
+<div class="dash">
+<div class="vetro core">
+<canvas id="core"></canvas>
+<div class="info">
+<h2 class="marchio">ANNOX <em>AI</em></h2>
+<div class="sub lusso">Intelligent Command Center</div>
+<div class="righe">
+<div><small>Stato</small><b id="cs">Pronto</b></div>
+<div><small>Modello</small><b>Groq · gpt-oss</b></div>
+<div><small>Ultima risposta</small><b id="ct">—</b></div>
+</div>
+<button class="btn" id="inizia" type="button">Inizia una conversazione</button>
+</div>
+</div>
+<div class="vetro att"><div class="titolo">Live Activity Monitor</div><ul id="log"></ul></div>
+</div>
+</section>
+<section class="vista" id="v-chat">
+<div class="vetro chatbox">
+<div class="chathead"><span class="titolo">Conversazione</span><button class="svuota" id="svuota" type="button">Elimina cronologia</button></div>
+<div class="chat" id="chat"></div>
+<form class="barra" id="modulo">
+<button class="ic" id="mic" type="button" title="Parla con l'agente"><svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3zM5 11a7 7 0 0 0 14 0M12 18v3"/></svg></button>
+<input id="testo" type="text" placeholder="Scrivi all'agente o premi il microfono…" autocomplete="off">
+<button class="ic" id="stop" type="button" title="Ferma la voce"><svg viewBox="0 0 24 24"><path d="M8 8h8v8H8z"/></svg></button>
+<button class="ic pieno" id="invia" type="submit" title="Invia"><svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+</form>
+</div>
+</section>
+<section class="vista" id="v-file">
+<div class="fc">
+<div class="vetro fl">
+<div class="titolo">File &amp; Document Center</div>
+<div class="zona" id="zona"><b>Trascina qui i file</b><small>PDF, Word, TXT, CSV, JSON, codice · massimo 10 MB</small><button class="btn" id="fscegli" type="button">Scegli i file</button><input type="file" id="finput" multiple hidden accept=".pdf,.docx,.txt,.md,.csv,.json,.py,.html,.js,.css,.log,.xml,.yaml,.yml"></div>
+<input class="cerca" id="fcerca" type="search" placeholder="Cerca per nome o contenuto…">
+<ul id="flista"></ul>
+</div>
+<div class="vetro fa">
+<div class="titolo" id="ftit">Documento</div>
+<div class="fchip" id="fchip" hidden></div>
+<div class="anteprima" id="fanteprima">Seleziona un documento dall’elenco.</div>
+<div class="fazioni"><button class="pill" id="friass" type="button">Riassumi</button><button class="pill" id="fscarica" type="button">Scarica</button><button class="pill" id="felimina" type="button">Elimina</button></div>
+<form class="fq" id="fform"><input id="fdom" type="text" placeholder="Chiedi qualcosa su questo documento…" autocomplete="off"><button class="ic pieno" type="submit" title="Chiedi"><svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button></form>
+<div class="frisp" id="frisp"></div>
+</div>
+</div>
+</section>
+</main>
+</div>
+<div id="toasts"></div>
+<script src="js/api.js"></script>
+<script src="js/file.js"></script>
+<script src="js/core.js"></script>
+<script src="js/moduli.js"></script>
+<script src="js/cronologia.js"></script>
+<script src="js/ruolo.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

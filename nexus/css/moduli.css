@@ -1,0 +1,31 @@
+.mod{height:100%;overflow-y:auto;display:flex;flex-direction:column;gap:14px}
+.riga{display:flex;gap:10px;flex-wrap:wrap}
+.campo{flex:1;min-width:200px;padding:11px 18px;border-radius:24px;border:1px solid rgba(var(--c),.25);background:rgba(255,255,255,.05);color:#fff;font:inherit;font-size:15px;outline:0}
+.campo:focus{border-color:rgba(var(--c),.7)}
+.pill{padding:10px 20px;font:inherit;font-size:12px;letter-spacing:.1em;color:#fff;background:rgba(var(--b),.2);border:1px solid rgba(var(--c),.3);border-radius:24px;cursor:pointer;transition:.2s}
+.pill:hover{background:rgba(var(--b),.5)}
+.vuoto{opacity:.55;font-size:14px}
+.griglia2{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;align-content:start}
+.fatto{padding:14px 16px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid rgba(var(--c),.14);border-left:2px solid rgb(var(--b));line-height:1.5;font-size:14px}
+.vcentro{display:flex;flex-direction:column;align-items:center;gap:14px;padding:10px 0 18px}
+.micg{width:104px;height:104px;padding:0;border-radius:50%;border:1px solid rgba(var(--c),.6);background:radial-gradient(circle,rgba(var(--b),.4),rgba(var(--b),.08));color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 0 34px rgba(var(--b),.45);transition:.2s}
+.micg:hover{transform:scale(1.05)}
+.micg svg{width:40px;height:40px}
+[data-st="listening"] .micg,[data-st="responding"] .micg{animation:pulsaM 1.2s ease-in-out infinite}
+@keyframes pulsaM{50%{box-shadow:0 0 60px rgba(var(--b),.9);transform:scale(1.07)}}
+.vst{font-size:12px;letter-spacing:.35em;text-transform:uppercase;color:rgb(var(--c))}
+.vonde{display:flex;align-items:center;gap:3px;height:36px}
+.vonde i{width:3px;height:4px;border-radius:2px;background:rgb(var(--c));opacity:.5}
+[data-st="listening"] .vonde i,[data-st="responding"] .vonde i{animation:vo .9s ease-in-out infinite;opacity:1}
+.vonde i:nth-child(3n){animation-delay:.15s!important}
+.vonde i:nth-child(3n+1){animation-delay:.3s!important}
+.vonde i:nth-child(4n){animation-delay:.45s!important}
+@keyframes vo{50%{height:30px}}
+.vitem{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.07);font-size:14px;line-height:1.6}
+.vitem b{color:rgb(var(--c));font-weight:400;margin-right:8px}
+.wris{white-space:pre-wrap;line-height:1.7;font-size:15px}
+.wris a{color:rgb(var(--c))}
+.imp{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07);flex-wrap:wrap}
+.imp>span{flex:1;min-width:180px}
+.sw{width:26px;height:26px;padding:0;border-radius:50%;border:1px solid rgba(255,255,255,.6);cursor:pointer}
+.calmo *{animation:none!important;transition:none!important}
